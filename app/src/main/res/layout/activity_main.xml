@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffB0C4DE">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="100px"
+        android:layout_height="50px"
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="200px"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="垂直列表"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="110px"
+        android:layout_height="50px"
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="300px"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="水平列表"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="120px"
+        android:layout_height="50px"
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="400px"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="网格列表"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="160px"
+        android:layout_height="50px"
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="500px"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="可删除项的列表"
+        android:textColor="#ffffffff" />
+
+    <com.ihu11.metro.flow.FlowView
+        android:id="@+id/flow_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:flow_color1="@color/color1"
+        app:flow_color2="@color/color2"
+        app:viewType="normal"
+        app:flow_stroke_width="2px"
+        app:round_radius="5px" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200px"
+    android:layout_height="250px">//必须指定宽高
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="200px"
+        android:layout_height="200px" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="200px"
+        android:layout_height="50px"
+        android:layout_below="@+id/img"
+        android:gravity="center" />
+
+</RelativeLayout>

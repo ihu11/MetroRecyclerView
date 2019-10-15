@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffB0C4DE">
+
+    <com.ihu11.metro.recycler.MetroRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="50px"
+        app:itemSpaceLeft="10px"
+        app:itemSpaceRight="10px"
+        app:itemSpaceTop="15px"
+        app:itemSpaceBottom="15px"
+        app:delayBindEnable="true"
+        app:supportVLeftKey="true"
+        app:supportVRightKey="true"
+        app:focusViewOnFrontEnable="true"/>
+
+    <com.ihu11.metro.flow.FlowView
+        android:id="@+id/flow_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:flow_color1="@color/color1"
+        app:flow_color2="@color/color2"
+        app:flow_stroke_width="2px"
+        app:round_radius="5px"
+        app:viewType="normal" />
+
+</RelativeLayout>
