@@ -44,7 +44,7 @@ public class MetroRecyclerView extends RecyclerView {
      */
     public final static int SCROLL_TYPE_ALWAYS_LEFT_ONE = 1;
     /**
-     * 像电视淘宝一样，把下一行放到RecyclerView的正中间,屏幕中的view必须最多三行
+     * 把下一行放到RecyclerView的正中间,屏幕中的view必须最多三行
      */
     public final static int SCROLL_TYPE_ALWAYS_CENTER = 2;
 
@@ -607,7 +607,7 @@ public class MetroRecyclerView extends RecyclerView {
      * @param type SCROLL_TYPE_ON_LAST 在最后一行才往下滚
      *             SCROLL_TYPE_ALWAYS_LEFT_ONE 留一行表示出未到最后一行,底下留一行就开始滚
      *             SCROLL_TYPE_ALWAYS_CENTER
-     *             像电视淘宝一样，把下一行放到RecyclerView的正中间,屏幕中的view必须最多三行
+     *             把下一行放到RecyclerView的正中间,屏幕中的view必须最多三行
      */
     public void setScrollType(int type) {
         mScrollType = type;
