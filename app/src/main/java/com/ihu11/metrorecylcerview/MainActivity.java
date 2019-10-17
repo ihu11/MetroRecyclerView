@@ -1,7 +1,7 @@
 package com.ihu11.metrorecylcerview;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.ihu11.metro.flow.FlowNormalView;
 import com.ihu11.metro.flow.FlowView;
 
-public class MainActivity extends AppCompatActivity implements View.OnFocusChangeListener, View.OnClickListener {
+public class MainActivity extends Activity implements View.OnFocusChangeListener, View.OnClickListener {
     private FlowView flowView;
     private TextView textView1;
     private TextView textView2;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
     public void onFocusChange(View view, boolean b) {
         if (b) {
             if (view == textView1) {
-                flowView.setSmooth(false);//直接到 不使用动画
+                //flowView.setSmooth(false);//直接到 不使用动画
             } else if (view == textView2) {
                 flowView.setFlowPadding(20, 20, 20, 20);//增加边框距离
             } else if (view == textView3) {

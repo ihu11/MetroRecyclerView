@@ -26,7 +26,6 @@ import java.util.List;
 
 /**
  * @author hxy
- * @date 2015-12-01
  */
 public class MetroRecyclerView extends RecyclerView {
     private final static String TAG = "MetroRecyclerView";

@@ -1,8 +1,7 @@
 package com.ihu11.metrorecylcerview;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.View;
 
 import com.ihu11.metro.flow.FlowView;
@@ -14,7 +13,7 @@ import com.ihu11.metro.recycler.OnMoveToListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ModifyActivity extends AppCompatActivity {
+public class ModifyActivity extends Activity {
 
     private MetroRecyclerView recyclerView;
     private FlowView flowView;

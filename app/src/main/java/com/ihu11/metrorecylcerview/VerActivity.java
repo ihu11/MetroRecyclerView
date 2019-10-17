@@ -1,7 +1,9 @@
 package com.ihu11.metrorecylcerview;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.ihu11.metro.flow.FlowView;
@@ -13,7 +15,7 @@ import com.ihu11.metro.recycler.OnMoveToListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VerActivity extends AppCompatActivity {
+public class VerActivity extends Activity {
 
     private MetroRecyclerView recyclerView;
     private FlowView flowView;
@@ -29,8 +31,11 @@ public class VerActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view);
 
         recyclerView.setScrollType(MetroRecyclerView.SCROLL_TYPE_ALWAYS_CENTER);
-        MetroRecyclerView.MetroGridLayoutManager layoutManager = new MetroRecyclerView.MetroGridLayoutManager(
-                this, 1, MetroRecyclerView.VERTICAL);
+        //两种实现方式
+//        MetroRecyclerView.MetroGridLayoutManager layoutManager = new MetroRecyclerView.MetroGridLayoutManager(
+//                this, 1, MetroRecyclerView.VERTICAL);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setOnMoveToListener(new OnMoveToListener() {
             @Override

@@ -1,7 +1,7 @@
 package com.ihu11.metrorecylcerview;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.ihu11.metro.flow.FlowView;
@@ -13,7 +13,7 @@ import com.ihu11.metro.recycler.OnMoveToListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GridActivity extends AppCompatActivity {
+public class GridActivity extends Activity {
 
     private MetroRecyclerView recyclerView;
     private FlowView flowView;
@@ -53,7 +53,7 @@ public class GridActivity extends AppCompatActivity {
         recyclerView.setOnScrollEndListener(new MetroRecyclerView.OnScrollEndListener() {
             @Override
             public void onScrollToBottom(int keyCode) {
-                //滑动到底部回调，用于刷新数据
+                //滑动到底部回调，用于刷新数据，每次到底部都会有回调，可能会回调多次，注意异步操作时的控制
                 int size = dataList.size();
                 dataList.addAll(genData());
                 adapter.notifyItemInserted(size);
