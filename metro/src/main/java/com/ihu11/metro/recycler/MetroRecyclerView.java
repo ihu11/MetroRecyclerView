@@ -1600,8 +1600,8 @@ public class MetroRecyclerView extends RecyclerView {
     }
 
     protected void scrollOneByOne(Status status) {
+		View view = status.getNextChildView();
         computeAndScroll(status);
-        View view = status.getNextChildView();
         saveViewLocationBeforeFly(status.getNextViewIndex());
         // 左右滚动翻页处理 这里没有考虑gridview的大小不一样的问题,直接认为左右滚动的时候都是相同大小的
         if (DEBUG) {
@@ -1611,14 +1611,14 @@ public class MetroRecyclerView extends RecyclerView {
         if (isSelectAfterKeyUp || isKeyScrollToNextOne(status) || isKeyScrollToPreOne(status)) {
             if (getRowNumber(status.nextPosition) == getRowNumber(status.itemCount - 1)
                     && status.virtualKeyCode == VIRTUAL_KEY_CODE_NEXT_ROW) {
-                scaleOut(status.getNextChildView(), status.nextPosition);
+                scaleOut(view, status.nextPosition);
             } else if (getRowNumber(status.nextPosition) == 0 && status.virtualKeyCode == VIRTUAL_KEY_CODE_PRE_ROW) {
-                scaleOut(status.getNextChildView(), status.nextPosition);
+                scaleOut(view, status.nextPosition);
             } else if (status.nextPosition == status.itemCount - 1 || status.nextPosition == 0) {
-                scaleOut(status.getNextChildView(), status.nextPosition);
+                scaleOut(view, status.nextPosition);
             }
         } else {
-            scaleOut(status.getNextChildView(), status.nextPosition);
+            scaleOut(view, status.nextPosition);
         }
     }
 
